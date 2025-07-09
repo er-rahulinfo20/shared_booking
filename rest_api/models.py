@@ -45,6 +45,5 @@ class Booking(models.Model):
     client = models.ForeignKey('Client', on_delete=models.CASCADE, related_name='bookings')
     regular_class = models.ForeignKey('RegularClass', on_delete=models.CASCADE, related_name='bookings')
 
-
     def __str__(self):
         return f"Booking for {self.client.name} in {self.regular_class}"

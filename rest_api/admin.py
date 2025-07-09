@@ -7,6 +7,7 @@ class ClientAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'phone_number', 'address', 'id')
     search_fields = ('name', 'email')
 
+
 @admin.register(RegularClass)
 class RegularClassAdmin(admin.ModelAdmin):
     list_display = ('instructor', 'master_class', 'date', 'total_slots', 'available_slots', 'id')  # Adjust fields as needed
@@ -16,7 +17,6 @@ class RegularClassAdmin(admin.ModelAdmin):
 class BookingAdmin(admin.ModelAdmin):
     list_display = ('client', 'regular_class')
     list_select_related = ('client', 'regular_class')
-
 
 
 @admin.register(MasterClass)
